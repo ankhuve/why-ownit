@@ -14,6 +14,31 @@ export default {
   }),
 
 // animations
+  moveLeftSlow: {
+    easing: 'ease-in-out',
+    scale: 1,
+    opacity: 1,
+    distance: '100%',
+    duration: 1000,
+    origin: 'right'
+  },
+
+  moveRightSlow: {
+    easing: 'ease-in-out',
+    scale: 1,
+    opacity: 1,
+    distance: '100%',
+    duration: 1000,
+    origin: 'left'
+  },
+
+  fadeInSlow: {
+    easing: 'ease-in-out',
+    scale: 0.9,
+    distance: 0,
+    duration: 2000
+  },
+
   fadeInUp: {
     origin: 'bottom',
     distance: '90px',
@@ -30,7 +55,7 @@ export default {
 
   fadeInDownShort: {
     origin: 'top',
-    distance: '30px',
+    distance: '45px',
     easing: 'ease-in-out',
     scale: 0.9
   },
