@@ -5,9 +5,7 @@
 <script>
   export default {
     data: () => {
-      return {
-        text: 'not-trigger-yet'
-      }
+      return {}
     },
     methods: {}
   }

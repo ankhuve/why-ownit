@@ -5,11 +5,11 @@ export default {
     // reset: true,
     beforeReveal: function (domEl) {
       domEl.classList.add('animated')
-      console.log('visar: ', domEl)
+      // console.log('visar: ', domEl)
     },
     afterReset: function (domEl) {
       domEl.classList.remove('animated')
-      console.log('döljer: ', domEl)
+      // console.log('döljer: ', domEl)
     }
   }),
 
@@ -17,7 +17,7 @@ export default {
   moveLeftSlow: {
     easing: 'ease-in-out',
     scale: 1,
-    opacity: 1,
+    // opacity: 1,
     distance: '100%',
     duration: 1000,
     origin: 'right'
@@ -26,7 +26,7 @@ export default {
   moveRightSlow: {
     easing: 'ease-in-out',
     scale: 1,
-    opacity: 1,
+    // opacity: 1,
     distance: '100%',
     duration: 1000,
     origin: 'left'
