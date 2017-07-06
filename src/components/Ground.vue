@@ -1,11 +1,6 @@
 <template>
   <section class="ground">
     <div class="ground-top--city"></div>
-    <div class="container">
-      <div class="row">
-        <!--<info-slider v-on:slideChange="adjustHeight"></info-slider>-->
-      </div>
-    </div>
 
     <div class="ground-top--wrapper">
 
@@ -79,7 +74,7 @@
       position: absolute;
       width: 50%;
       height: 220px;
-      transform: translate(100%, -140%);
+      transform: translate(100%, -138%);
     }
 
     .ground-top--wrapper{
@@ -95,15 +90,9 @@
         background: no-repeat center bottom;
         background-size: 80%;
         width: 100%;
-        cursor: pointer;
 
         &.small{
           height: 260px;
-        }
-
-        &:hover{
-          animation: none;
-          transform: scale(1.05);
         }
 
         &#ownit{
@@ -117,7 +106,6 @@
         }
         &#orange{
           background-image: url('../assets/svg/Orange.svg');
-          // animation-delay: (0.4s);
           display: none;
         }
         &#brown{
@@ -183,7 +171,7 @@
       @include media-breakpoint-up(lg){
         .ground-top--grass{
           width: 150%;
-          top: 95%;
+          top: 100%;
         }
       }
     }
@@ -202,13 +190,6 @@
     components: {
       BlockQuote,
       AddressSearch
-    },
-    mounted () {
-      document.querySelectorAll('.ground-top--house').forEach(el => {
-        el.addEventListener('click', () => {
-          document.querySelector('.info-section').style.transform = 'translate3d(0, 0, 0)'
-        })
-      })
     }
   }
 </script>

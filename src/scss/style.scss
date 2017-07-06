@@ -53,15 +53,15 @@ body{
   }
 
   h1{
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   h2{
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
 
   h3{
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
   h4{
@@ -74,7 +74,7 @@ body{
 
   @include media-breakpoint-up(md){
     h1{
-      font-size: 3.3rem;
+      font-size: 3rem;
     }
 
     h2{

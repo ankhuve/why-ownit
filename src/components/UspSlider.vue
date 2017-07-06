@@ -34,7 +34,7 @@
 
     <div class="container-fluid sr-fadeInSlow delay-2x">
       <div class="row justify-content-center" id="nav-helper">
-        <div class="col-xs-12">
+        <div class="col-sm-12">
           <h4>(PSST! Klicka på en av bilderna ovan)</h4>
         </div>
       </div>
@@ -46,7 +46,7 @@
           <!-- slides here -->
           <div class="usp-slider__slide" id="gaming" data-slide=0>
             <div data-animation="fadeInUp" class="row justify-content-center">
-              <div class="col-xs-12">
+              <div class="col-sm-12">
                 <h1>Gaming är vår passion!</h1>
               </div>
             </div>
@@ -66,7 +66,7 @@
           </div>
           <div class="usp-slider__slide" id="love" data-slide=1>
             <div data-animation="fadeInUp" class="row justify-content-center">
-              <div class="col-xs-12">
+              <div class="col-sm-12">
                 <h1>Våra kunder är vår passion!</h1>
               </div>
             </div>
@@ -134,7 +134,6 @@
     }
 
     .selected-box{
-      /*border-top: rgba(0,0,0,0) solid 4px;*/
       background: #13323a;
       height: calc(100% - 4px);
       transform: translate3d(100%, 4px, 0);

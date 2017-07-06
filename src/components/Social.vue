@@ -211,39 +211,56 @@
   export default {
     name: 'social',
     data () {
-      return {}
+      return {
+        fbBaseUrl: 'https://graph.facebook.com/'
+      }
     },
     components: {
       BlockQuote,
       InfoSlider
     },
-    methods: {},
-    mounted () {
-      let feedUrl = 'https://api.instagram.com/v1/users/4189406095/media/recent/?access_token=5657288245.4a2f028.46d3b1b8bd314487bc78e85e22aafad1&count=2'
-
-      const $clouds = $('.cloud')
-
-      $.ajax({
-        url: feedUrl,
-        type: 'GET',
-        dataType: 'jsonp',
-        cache: false,
-        success: (response) => {
-          for (let i = 0; i < ($clouds.length); i++) {
-            let $post = $($clouds[i]).find('.cloud--post')
-            let $postImage = $post.find('.image')
-
-            $postImage.css('background-image', 'url(' + response.data[i].images.standard_resolution.url + ')')
-            $postImage.attr('title', response.data[i].caption.text)
-            $post.find('a').attr('href', response.data[i].link)
-            $post.find('.stats > span.likes').html(response.data[i].likes.count)
-            $post.find('.stats > span.comments').html(response.data[i].comments.count)
+    methods: {
+      // Gets the latest posts from the Facebook page with the given id
+      getPagePosts (pageId) {
+        $.ajax({
+          url: this.fbBaseUrl + pageId,
+          type: 'GET',
+          dataType: 'jsonp',
+          cache: false,
+          data: {
+            'access_token': '357592347992070|7AcOOPVAzoeBUBybJ5XLBVJHYj8',
+            fields: 'posts{attachments{media},message,link,picture,comments.limit(0).summary(true){message,from,likes.limit(0)},likes.limit(0).summary(true)}'
+          },
+          success: (response) => {
+            this.displayPosts(response.posts.data)
+          },
+          error: (e) => {
+            console.log('Post data request failed: ', e)
           }
-        },
-        error: (e) => {
-          console.log('Instagram request failed: ', e)
-        }
-      })
+        })
+      },
+      // Displays the posts with images in the clouds
+      displayPosts (posts) {
+        const $clouds = $('.cloud')
+
+        let postsWithImagesCount = 0
+        posts.forEach(post => {
+          if (post.picture && postsWithImagesCount < 2) {
+            let $post = $($clouds[postsWithImagesCount]).find('.cloud--post')
+            let $postImage = $post.find('.image')
+            $postImage.css('background-image', 'url(' + post.attachments.data[0].media.image.src + ')')
+            $postImage.attr('title', post.message)
+            $post.find('a').attr('href', post.link)
+            $post.find('.stats > span.likes').html(post.likes.summary.total_count)
+            $post.find('.stats > span.comments').html(post.comments.summary.total_count)
+
+            postsWithImagesCount++
+          }
+        })
+      }
+    },
+    mounted () {
+      this.getPagePosts('OwnitBroadband')
     }
   }
 </script>

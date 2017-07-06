@@ -7,21 +7,21 @@
     </div>
     <div class="info-slider">
       <div class="slides-wrapper">
-        <!--<div class="row">-->
-          <template v-for="(slide, index) in slides">
-            <div class="slide" :data-id="index">
-              <div class="slide-content row" data-animation="fadeInUp">
-                <template v-for="col in slide">
-                  <block-quote :class="'text-center col-lg-' + col.cols" :title="col.title" :body="col.body">
+        <template v-for="(slide, index) in slides">
+          <div class="slide" :data-id="index">
+            <div class="slide-content row" data-animation="fadeInUp">
+              <template v-for="(col, service) in slide">
+                <div :class="'justify-content-center col-lg-' + col.cols">
+                  <block-quote class="text-center" :title="col.title" :body="col.body">
                     <template v-if="col.link">
                       <a :href='col.link' target="_blank"><button type='button' class='btn btn-primary col-sm-12'>Läs mer</button></a>
                     </template>
                   </block-quote>
-                </template>
-              </div>
+                </div>
+              </template>
             </div>
-          </template>
-        <!--</div>-->
+          </div>
+        </template>
       </div>
     </div>
   </div>
@@ -32,7 +32,6 @@
   .info-section{
     padding-bottom: 15rem;
     transition: transform 0.3s;
-    transform: translate3d(0, 100%, 0);
 
     .info-slider{
       width: inherit;
@@ -65,6 +64,25 @@
   }
 
   .slide-content{
+    .service-icon{
+      background: no-repeat center center;
+      background-size: contain;
+      height: 4rem;
+      width: auto;
+
+      &#icon-tv{
+        background-image: url('../assets/img/tv.png');
+      }
+
+      &#icon-telephony{
+        background-image: url('../assets/img/telephony.png');
+      }
+
+      &#icon-broadband{
+        background-image: url('../assets/img/broadband.png');
+      }
+    }
+
     .block-quote{
       padding-bottom: 0;
       > h2{
@@ -91,19 +109,22 @@ export default {
         0: {
           tv: {
             title: 'TV',
-            body: 'Ownit tv – Vår mest flexibla tjänst någonsin, kanske Sveriges mest flexibla tv-tjänst! Med Ownit tv skräddarsyr du enkelt ditt tv-tittande, precis som du vill ha det!',
+            iconPath: '../assets/img/tv.png',
+            body: '<div class="service-icon" id="icon-tv"></div>Ownit tv – Vår mest flexibla tjänst någonsin, kanske Sveriges mest flexibla tv-tjänst! Med Ownit tv skräddarsyr du enkelt ditt tv-tittande, precis som du vill ha det!',
             link: 'https://www.ownit.se/privat-tv',
             cols: 4
           },
           broadband: {
             title: 'Bredband',
-            body: 'Surfa snabbt och säkert med vårt bredband via fiber, välj mellan flera olika hastigheter ända upp till 1000 Mbit/sek!',
+            iconPath: '/assets/img/bredband.png',
+            body: '<div class="service-icon" id="icon-broadband"></div>Surfa snabbt och säkert med vårt bredband via fiber, välj mellan flera olika hastigheter ända upp till 1000 Mbit/sek!',
             link: 'https://www.ownit.se/privat-bredband',
             cols: 4
           },
           telephony: {
             title: 'Telefoni',
-            body: 'Självklart erbjuder vi en riktigt bra telefonitjänst – med oss ringer du alltid mer för mindre!',
+            iconPath: '/assets/img/telefoni.png',
+            body: '<div class="service-icon" id="icon-telephony"></div>Självklart erbjuder vi en riktigt bra telefonitjänst – med oss ringer du alltid mer för mindre!',
             link: 'https://www.ownit.se/privat-telefoni',
             cols: 4
           }
@@ -131,7 +152,7 @@ export default {
         2: {
           company: {
             title: 'Företag',
-            body: 'Snabb och pålitlig fiberanslutning till ditt företag',
+            body: 'Snabb och pålitlig fiberanslutning till ditt företag.',
             link: 'https://www.ownit.se/foretag-ownit',
             cols: 12
           }

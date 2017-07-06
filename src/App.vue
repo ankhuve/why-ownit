@@ -2,6 +2,7 @@
   <div id="app">
     <hero></hero>
     <usp-slider></usp-slider>
+    <story></story>
     <social></social>
     <ground></ground>
   </div>
@@ -12,6 +13,7 @@ import Hero from './components/Hero'
 import UspSlider from './components/UspSlider'
 import Social from './components/Social'
 import Ground from './components/Ground'
+import Story from './components/Story'
 
 export default {
   name: 'app',
@@ -19,7 +21,8 @@ export default {
     Hero,
     UspSlider,
     Social,
-    Ground
+    Ground,
+    Story
   }
 }
 </script>
