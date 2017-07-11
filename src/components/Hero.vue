@@ -36,10 +36,10 @@
 
   .hero{
     color: #f7c600;
-    height: 100vh;
+    height: calc(100vh - 120px);
     width: 100%;
     max-width: 100%;
-    max-height: 100vh;
+    max-height: calc(100vh - 120px);
     overflow: hidden;
     padding: 0;
 
@@ -55,17 +55,21 @@
 
     @include media-breakpoint-up(lg){
       .hero--footer{
-        width: 100%;
-        position: absolute;
         bottom: 4rem;
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-height: 700px){
+      .hero--footer{
+        bottom: 6rem;
       }
     }
 
     .btn-hero{
       background: url('../assets/CTA-button_80px.png') no-repeat center center;
       background-size: contain;
-      height: 3.5rem;
-      width: 3.5rem;
+      height: 3rem;
+      width: 3rem;
       border-radius: 50%;
       border: none;
       transition: box-shadow 0.3s;
@@ -97,8 +101,8 @@
     }
 
     #parallax-2{
-      background: url('../assets/sofa.png') no-repeat center 60vh;
-      background-size: 1500px;
+      background: url('../assets/sofa.png') no-repeat center 50vh;
+      background-size: 1200px;
     }
 
     .hero-bg{
@@ -110,7 +114,7 @@
     @include media-breakpoint-up(md){
       #parallax-2{
         // soffa
-        background-size: 1800px;
+        background-size: 1600px;
       }
     }
 
@@ -123,6 +127,13 @@
         // play-stjärna
         background-size: contain;
       }
+    }
+  }
+
+  @include media-breakpoint-up(lg){
+    .hero{
+      height: calc(100vh - 144px);
+      max-height: calc(100vh - 144px);
     }
   }
 </style>

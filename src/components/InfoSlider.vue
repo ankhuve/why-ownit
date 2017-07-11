@@ -41,6 +41,10 @@
         width: 300%;
         transition: all 0.3s;
         transform: translate3d(0 * -33.333%, 0, 0) scale(0.9);
+        -webkit-transform: translate3d(0 * -33.333%, 0, 0) scale(0.9);
+        -moz-transform: translate3d(0 * -33.333%, 0, 0) scale(0.9);
+        -ms-transform: translate3d(0 * -33.333%, 0, 0) scale(0.9);
+        -o-transform: translate3d(0 * -33.333%, 0, 0) scale(0.9);
         height: 0;
         visibility: hidden;
         overflow: hidden;
@@ -57,6 +61,7 @@
           display: inline-block;
           position: relative;
           padding: 0 15px;
+          vertical-align: top;
         }
       }
 
@@ -169,9 +174,12 @@ export default {
       }
 
       // make only the last clicked slider nav button active
-      this.sliderNavs.forEach((nav) => {
-        nav.classList.remove('active')
-      })
+      for (let i = 0; i < this.sliderNavs.length; i++) {
+        this.sliderNavs[i].classList.remove('active')
+      }
+      // this.sliderNavs.forEach((nav) => {
+      //   nav.classList.remove('active')
+      // })
       e.target.classList.add('active')
 
       this.activeSlide = e.target.dataset.slideId
@@ -185,9 +193,19 @@ export default {
     // translate the slider to the correct slide and adjust height
     adjustSlideHeight () {
       if (this.sliderActivated) {
-        this.slideHeight = document.querySelector('.slide[data-id="' + this.activeSlide + '"] > .slide-content').offsetHeight
+        let activeSlide = document.querySelector('.slide[data-id="' + this.activeSlide + '"] > .slide-content')
+        if (activeSlide) {
+          this.slideHeight = document.querySelector('.slide[data-id="' + this.activeSlide + '"] > .slide-content').offsetHeight
+        } else {
+          this.slideHeight = 0
+        }
+
         $(this.slider).css({
           'transform': 'translate3d(' + this.activeSlide * -(100 / 3) + '%, 0, 0) scale(1)',
+          '-webkit-transform': 'translate3d(' + this.activeSlide * -(100 / 3) + '%, 0, 0) scale(1)',
+          '-moz-transform': 'translate3d(' + this.activeSlide * -(100 / 3) + '%, 0, 0) scale(1)',
+          '-ms-transform': 'translate3d(' + this.activeSlide * -(100 / 3) + '%, 0, 0) scale(1)',
+          '-o-transform': 'translate3d(' + this.activeSlide * -(100 / 3) + '%, 0, 0) scale(1)',
           'height': this.slideHeight
         })
       }

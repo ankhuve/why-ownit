@@ -137,6 +137,7 @@
       background: #13323a;
       height: calc(100% - 4px);
       transform: translate3d(100%, 4px, 0);
+      z-index: -1;
     }
 
     .selected-box-border{
@@ -150,7 +151,7 @@
       overflow: hidden;
       width: 33.3333%;
       height: 15vh;
-      z-index: 1;
+      z-index: 2;
     }
 
     @include media-breakpoint-up(md){
@@ -240,7 +241,10 @@
         const boxSelector = document.querySelector('.selected-box')
         boxSelector.style.transform = 'translate3d(' + n * 100 + '%, 4px, 0)'
 
-        document.querySelectorAll('.usp-slider__slide').forEach(slide => slide.classList.remove('active'))
+        const slides = document.querySelectorAll('.usp-slider__slide')
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].classList.remove('active')
+        }
 
         const activeSlide = document.querySelector('.usp-slider__slide[data-slide="' + n + '"]')
         activeSlide.classList.add('active')
