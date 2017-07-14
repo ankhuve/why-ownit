@@ -63,6 +63,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#97c668', endColorstr='#6a8e43', GradientType=0 );
     position: relative;
     width: 100%;
+    padding-bottom: 5em;
 
     .ground--offset{
       top: -$city-offset * 0.8;

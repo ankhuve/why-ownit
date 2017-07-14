@@ -15,19 +15,27 @@
     </form>
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
   .address-start-search {
-    margin: -200px auto 5rem;
-    padding: 2rem;
+    margin: -200px auto 4em;
+    padding: 1.5em;
     background: rgba(0,0,0,.2);
     border-radius: 10px;
 
-    > form input{
-      padding: 1rem;
+    > form input.form-control{
+      display: block;
+      width: 100%;
+      line-height: 1.25;
+      color: #464a4c;
+      background: #fff none;
+      background-clip: padding-box;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      padding: 0.7em;
       border-radius: 10px;
-      font-size: 1.4rem;
+      font-size: 1.2em;
       font-family: CreightonPro-Book,Helvetica,Arial,sans-serif;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.0em;
     }
 }
 </style>

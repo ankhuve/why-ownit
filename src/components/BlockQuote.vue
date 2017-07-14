@@ -13,11 +13,11 @@
   .block-quote{
     border-left: 4px;
     text-align: left;
-    padding: 1rem 0 2rem;
+    padding: 1em 0 2em;
 
     &.bordered{
       > *{
-        padding-left: 1rem;
+        padding-left: 1em;
       }
 
       > p{
@@ -29,7 +29,7 @@
 
   @include media-breakpoint-up(sm){
     .block-quote{
-      padding: 1rem 1rem 2rem;
+      padding: 1em 1em 2em;
     }
   }
 </style>

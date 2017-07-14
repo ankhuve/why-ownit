@@ -15,12 +15,6 @@
   </section>
 </template>
 
-<style scoped lang="scss">
-  .embed-responsive{
-    /*width: 91.67%;*/
-  }
-</style>
-
 <script>
   import BlockQuote from './BlockQuote'
 

@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <header class="header--fake"><h2>Ownit header</h2></header>
+  <div class="why-ownit">
     <hero></hero>
     <usp-slider></usp-slider>
     <story></story>
@@ -17,7 +16,7 @@ import Ground from './components/Ground'
 import Story from './components/Story'
 
 export default {
-  name: 'app',
+  name: 'why-ownit',
   components: {
     Hero,
     UspSlider,
@@ -30,20 +29,4 @@ export default {
 
 <style lang="scss">
   @import "scss/style.scss";
-
-  .header--fake{
-    height: 120px;
-    background: white;
-    padding: 3rem;
-
-    > h2{
-      color: #ca1719;
-    }
-  }
-
-  @include media-breakpoint-up(lg){
-    .header--fake{
-      height: 144px;
-    }
-  }
 </style>

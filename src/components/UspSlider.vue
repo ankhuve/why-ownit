@@ -117,12 +117,16 @@
   .usp-slider{
 
     #nav-helper{
-      margin-top: 2rem;
+      margin-top: 2em;
+
+      h4{
+        color: #ececec;
+      }
     }
 
     @include media-breakpoint-up(sm){
       #nav-helper{
-        margin-top: 5rem;
+        margin-top: 5em;
       }
     }
 
@@ -147,7 +151,7 @@
 
     .usp-slider__nav{
       cursor: pointer;
-      padding: 1rem;
+      padding: 1em;
       overflow: hidden;
       width: 33.3333%;
       height: 15vh;
@@ -157,7 +161,7 @@
     @include media-breakpoint-up(md){
       .usp-slider__nav{
         height: 185px;
-        padding: 2rem;
+        padding: 2em;
       }
     }
 

@@ -30,7 +30,7 @@
   $city-offset: 280px;
 
   .info-section{
-    padding-bottom: 15rem;
+    padding-bottom: 18em;
     transition: transform 0.3s;
 
     .info-slider{
@@ -72,7 +72,7 @@
     .service-icon{
       background: no-repeat center center;
       background-size: contain;
-      height: 4rem;
+      height: 3.2em;
       width: auto;
 
       &#icon-tv{
@@ -91,11 +91,11 @@
     .block-quote{
       padding-bottom: 0;
       > h2{
-        font-size: 2.2rem;
+        font-size: 2.2em;
       }
 
       a > button{
-        font-size: 1.2rem;
+        font-size: 1.2em;
       }
     }
   }

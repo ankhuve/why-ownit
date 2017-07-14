@@ -71,7 +71,7 @@
     .social-links{
       > a > .social-icon{
         display: inline-block;
-        margin: 0 1rem 1rem;
+        margin: 0 1em 1em;
         background: no-repeat center center;
         background-size: contain;
         height: 50px;
@@ -96,20 +96,20 @@
     .cloud-container{
       width: 100%;
       overflow: hidden;
-      margin-top: 2rem;
-      margin-bottom: 4rem;
+      margin-top: 2em;
+      margin-bottom: 4em;
 
       .cloud{
         background: no-repeat center top;
         background-size: calc(100% - 30px);
         height: 500px;
-        margin-bottom: 2rem;
+        margin-bottom: 2em;
 
         &.cloud-1{
           background-image: url('../assets/cloud-2.svg');
 
           > .cloud--post {
-            margin-top: -5rem;
+            margin-top: -5em;
           }
         }
 
@@ -119,14 +119,14 @@
 
         .cloud--post{
           max-width: 220px;
-          margin: -3rem auto 0;
+          margin: -3em auto 0;
 
           > a > .image{
-            margin: 230px auto 1rem;
+            margin: 230px auto 1em;
             background: no-repeat center top;
             background-size: cover;
             height: 220px;
-            border: solid white 0.25rem;
+            border: solid white 0.25em;
             border-radius: 10px;
           }
 
@@ -137,16 +137,16 @@
               position: relative;
               right: 10%;
               background: url('../assets/svg/like-heart.svg') no-repeat 0 center;
-              background-size: 1.3rem;
-              padding-left: 2rem;
+              background-size: 1.3em;
+              padding-left: 2em;
             }
 
             > span.comments{
               position: relative;
               left: 10%;
               background: url('../assets/svg/speech-bubble.svg') no-repeat 0 center;
-              background-size: 1.3rem;
-              padding-left: 2rem;
+              background-size: 1.3em;
+              padding-left: 2em;
             }
           }
         }
@@ -155,12 +155,12 @@
       @include media-breakpoint-up(sm){
         .cloud{
           > .cloud--post {
-            margin-top: -2rem;
+            margin-top: -2em;
           }
 
           &.cloud-2{
             > .cloud--post{
-              margin-top: -2rem;
+              margin-top: -2em;
             }
           }
         }
@@ -171,14 +171,14 @@
           background-size: calc(100% - 30px);
 
           > .cloud--post {
-            // margin-top: -2rem;
+            // margin-top: -em;
           }
 
           &.cloud-2{
             margin-top: 150px;
 
             > .cloud--post{
-              margin-top: -4rem;
+              margin-top: -4em;
             }
           }
         }
@@ -189,12 +189,12 @@
           background-size: calc(100% - 30px);
 
           > .cloud--post {
-            margin: 0rem auto 0;
+            margin: 0em auto 0;
           }
 
           &.cloud-2{
             > .cloud--post{
-              margin-top: -2rem;
+              margin-top: -2em;
             }
           }
         }

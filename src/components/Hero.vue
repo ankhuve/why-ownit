@@ -44,32 +44,37 @@
     padding: 0;
 
     h1{
-      padding-top: 4rem;
+      padding-top: 1em;
     }
 
     .hero--footer{
       width: 100%;
       position: absolute;
       bottom: 10vh;
+
+      h5{
+        font-size: 1.5em;
+        text-transform: none !important;
+      }
     }
 
     @include media-breakpoint-up(lg){
       .hero--footer{
-        bottom: 4rem;
+        bottom: 4em;
       }
     }
 
     @media only screen and (min-width: 768px) and (max-height: 700px){
       .hero--footer{
-        bottom: 6rem;
+        bottom: 6em;
       }
     }
 
     .btn-hero{
       background: url('../assets/CTA-button_80px.png') no-repeat center center;
       background-size: contain;
-      height: 3rem;
-      width: 3rem;
+      height: 3em;
+      width: 3em;
       border-radius: 50%;
       border: none;
       transition: box-shadow 0.3s;

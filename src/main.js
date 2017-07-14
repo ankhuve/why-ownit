@@ -6,7 +6,7 @@ import srConfig from './scrollReveal'
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  el: '#why-ownit',
   template: '<App/>',
   components: { App },
   data: {},
@@ -19,7 +19,6 @@ new Vue({
     srConfig.sr.reveal('.sr-fadeInDownShort', srConfig.fadeInDownShort)
     srConfig.sr.reveal('.sr-fadeInLeft', srConfig.fadeInLeft)
     srConfig.sr.reveal('.sr-fadeInRight', srConfig.fadeInRight)
-    srConfig.sr.reveal('.sr-rotateIn', srConfig.rotateIn)
     srConfig.sr.reveal('.delay', { delay: 500 })
     srConfig.sr.reveal('.delay-2x', { delay: 1000 })
   }
