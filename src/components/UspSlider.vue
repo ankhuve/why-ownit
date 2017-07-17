@@ -227,7 +227,7 @@
 
       $('[data-scroll="get-ownit"]').click(() => {
         $('html, body').animate({
-          scrollTop: $('.address-start-search').offset().top
+          scrollTop: $('.address-why-ownit-search').offset().top
         }, 500)
       })
     },
