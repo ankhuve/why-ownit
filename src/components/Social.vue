@@ -64,10 +64,6 @@
     background: linear-gradient(to bottom, #092129 0%, #1b7a9c 65%, #2bb3c2 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#092129', endColorstr='#2bb3c2', GradientType=0 );
 
-    #sky-quote{
-      margin-top: 10%;
-    }
-
     .social-links{
       > a > .social-icon{
         display: inline-block;
@@ -133,20 +129,21 @@
           .stats{
             color: #5bc0de;
 
-            > span.likes{
+            > span{
               position: relative;
-              right: 10%;
-              background: url('../assets/svg/like-heart.svg') no-repeat 0 center;
-              background-size: 1.3em;
+              background: no-repeat left center;
+              background-size: contain;
               padding-left: 2em;
-            }
 
-            > span.comments{
-              position: relative;
-              left: 10%;
-              background: url('../assets/svg/speech-bubble.svg') no-repeat 0 center;
-              background-size: 1.3em;
-              padding-left: 2em;
+              &.likes{
+                right: 10%;
+                background-image: url('../assets/svg/like-heart.svg');
+              }
+
+              &.comments{
+                left: 10%;
+                background-image: url('../assets/svg/speech-bubble.svg');
+              }
             }
           }
         }

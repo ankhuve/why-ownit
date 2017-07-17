@@ -1,5 +1,5 @@
 <template>
-  <div class="address-start-search">
+  <div class="address-why-ownit-search">
     <h2>Kan du få Ownit?</h2>
     <p>Börja genom att ange din adress för att se hastighet &amp; pris.</p>
 
@@ -16,7 +16,7 @@
   </div>
 </template>
 <style lang="scss" scoped>
-  .address-start-search {
+  .address-why-ownit-search {
     margin: -200px auto 4em;
     padding: 1.5em;
     background: rgba(0,0,0,.2);

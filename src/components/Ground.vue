@@ -70,12 +70,23 @@
     }
 
     .ground-top--city{
-      background: url('../assets/svg/City skyline.svg') no-repeat right bottom;
-      background-size: contain;
+      background: url('../assets/svg/City skyline.svg') no-repeat left bottom;
+      background-size: auto 100%;
       position: absolute;
       width: 50%;
-      height: 220px;
-      transform: translate(100%, -138%);
+      height: 250px;
+      transform: translate(100%, -135%);
+    }
+
+    @include media-breakpoint-up(md) {
+      .ground-top--city {
+        background-position: right bottom;
+        background-size: contain;
+        position: absolute;
+        width: 50%;
+        height: 220px;
+        transform: translate(100%, -135%);
+      }
     }
 
     .ground-top--wrapper{
